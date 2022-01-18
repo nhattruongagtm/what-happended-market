@@ -1,0 +1,115 @@
+.footer{
+    height: 464px;
+    padding: 51px 100px 113px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 83px;
+    .footer__boundary{
+        display: flex;
+        gap: 184px;
+        .footer__left{
+            width: 839px;
+            .footer__title{
+                margin-bottom: 31px;
+                height: 15px;
+            }
+            .footer__content{
+                width: 235px;
+                height: 135px;
+                color: $black-two;
+                
+                @include textStyle($font,unset,14px,30px);
+               
+
+            }
+            .footer__label{
+                display: inline;
+                @include textStyle($font,bold,14px,40px);
+            }
+        }
+        .footer__right{
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between;
+            
+            .footer__label{
+                @include textStyle($font,bold,14px,40px);
+                // margin-bottom: 22px;
+                height: fit-content;
+                display: inline;
+            }
+            
+            &__item{
+                p{
+                    display: inline;
+                }
+                p:last-child{
+                    @include textStyle($font-notosans,300,14px,30px);
+                    
+                }
+                .footer__content__order{
+                    width: 128px;
+                    height: 138px;
+                }
+                .footer__content__account{
+                    width: 82px;
+                    height: 107px;
+                }
+                .footer__content__about{
+                    width: 82px;
+                    height: 76px;
+                }
+                .footer__content__help{
+                    width: 98px;
+                }
+
+            }
+
+        }
+    }
+    .footer__info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .footer__address{
+            width: 839px;
+            @include textStyle($font-notosans,300,14px,24px);
+        }
+        .footer__social{
+            display: flex;
+            gap: 23px;
+
+            &__item{
+                
+                &--notion{
+                    background: url('../assets/images/snsicon-01.png');
+                    
+                }
+                &--fb{
+                    background: url('../assets/images/snsicon-02.png');
+                    
+                }
+                &--blog{
+                    background: url('../assets/images/snsicon-03.png');
+                    
+                }
+                width: 24px;
+                height: 24px;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            
+        }
+    }
+}
+@media screen and(max-width: 486px) {
+
+    .footer{
+        padding: 30px;
+        width: $width-responsive;
+
+        &__left{
+            width: 340px;
+        }
+    }
+}

@@ -1,0 +1,133 @@
+.brand__story {
+  height: 956px;
+  background-color: $cerulean;
+  padding-top: 149px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  .story__title {
+    color: $sun-yellow;
+
+    &__label {
+    }
+    &__content {
+      margin-bottom: 77px;
+      font-family: $font-notosans;
+      font-weight: 300;
+      font-style: normal;
+    }
+  }
+  .story__book {
+    width: 1253px;
+    height: 441px;
+    background: url("../assets/images/window.png");
+    object-fit: contain;
+    position: absolute;
+    top: 345px;
+    z-index: 3;
+    &__right {
+      width: 50%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: $black-three;
+      padding: 63px 0 0 44px;
+      .book__right__title {
+        width: fit-content;
+        height: 20px;
+        text-transform: uppercase;
+        margin-bottom: 39px;
+        @include textStyle($font, 800, 25px, 60px);
+      }
+      .book__right__content {
+        width: 528px;
+        margin-bottom: 47px;
+        @include textStyle($font-notosans, 300, 16px, 30px);
+      }
+    }
+  }
+  .story__absolute {
+    z-index: 2;
+    position: absolute;
+  }
+  .story__note {
+    width: 183px;
+    height: 208px;
+    background: url("../assets/images/object-01.png");
+    top: 183px;
+    left: 169px;
+  }
+  .story__book__1 {
+    width: 192px;
+    height: 338px;
+    background: url("../assets/images/object-06.png");
+    bottom: 203px;
+    left: 0;
+  }
+  .story__book__2 {
+    width: 180px;
+    height: 255px;
+    background: url("../assets/images/object-07.png");
+    
+    left: 190px;
+    bottom: 204px;
+  }
+  .story__time {
+    width: 350px;
+    height: 233px;
+    background: url("../assets/images/object-05.png");
+    right: 0;
+    bottom: 190px;
+  }
+  .story__plant {
+    width: 197px;
+    height: 457px;
+    background: url("../assets/images/object-04.png");
+    right: 0;
+    top: 190px;
+    z-index: 1;
+  }
+  .story__book__3 {
+    width: 147px;
+    height: 134px;
+    background: url("../assets/images/object-02.png");
+    right: 256px;
+    top: 61px;
+    z-index: 1;
+  }
+  .story__book__4 {
+    width: 148px;
+    height: 165px;
+    background: url("../assets/images/object-03.png");
+    right: 171px;
+    top: 114px;
+    z-index: 2;
+  }
+}
+@media screen and (max-width: 486px) {
+  .brand__story{
+    width: $width-responsive;
+
+    .story__book{
+      width: 895px;
+      background-position-x: 50%;
+
+      &__right{
+        padding: 20px;
+        top: 20px;
+
+        .book__right__content{
+          width: fit-content;
+        }
+        .book__right__title{
+          font-size: 20px;
+        }
+      }
+    }
+    .story__note,.story__book__1,.story__book__2,.story__book__3,.story__book__4,.story__time,.story__plant{
+      display: none;
+    }
+  }
+  
+}

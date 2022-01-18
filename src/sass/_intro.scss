@@ -1,0 +1,27 @@
+.intro {
+  height: 576px;
+  display: flex;
+  flex-direction: column;
+  gap: 59px;
+  align-items: flex-start;
+  color: white;
+  background: url("../assets/images/introduction-bg.png");
+  object-fit: contain;
+  &__title {
+    text-transform: uppercase;
+    @include textStyle($font, 800, 50px, 60px);
+    letter-spacing: 5px;
+    margin-top: 174px;
+  }
+  &__content {
+    width: 667px;
+    @include textStyle($font, normal, 20px, 35px);
+    margin-bottom: 181px;
+  }
+}
+
+@media screen and (max-width: 486px) {
+  .intro{
+    width: $width-responsive;
+  }
+}

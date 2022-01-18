@@ -1,0 +1,57 @@
+.container {
+  width: 1920px;
+  min-height: 100vh;
+}
+.fluid {
+  padding: 0 175px;
+}
+.see__more {
+  @include textStyle($font, 800, 23px, 25px);
+  width: 199px;
+  height: 60px;
+  border: 3px solid $dark-maroon;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: white;
+  span {
+    width: 126px;
+  }
+
+  &:hover {
+    background-color: $dark-maroon;
+    color: white;
+  }
+}
+.title {
+    text-align: center;
+  &__label {
+    @include textStyle($font, bold, 45px, 60px);
+    letter-spacing: 4.5px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    height: 34px;
+  }
+  &__content {
+    @include textStyle($font, 100, 16px, 30px);
+    height: 45px;
+    max-width: 720px;
+    margin: auto;
+    text-align: center;
+  }
+}
+@font-face {
+  font-family: noto-sans-light;
+  src: url('../assets/fonts/Noto_Sans_KR/NotoSansKR-Light.otf');
+}
+@font-face {
+  font-family: noto-sans-medium;
+  src: url('../assets/fonts/Noto_Sans_KR/NotoSansKR-Medium.otf');
+}
+@media screen and (max-width: 486px) {
+  .container{
+    max-width: 100%;
+  }
+  
+}

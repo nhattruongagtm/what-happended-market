@@ -1,0 +1,7 @@
+
+@mixin textStyle($font: 'Montserrat', $weight: 'normal',$size: '18px',$line-height: '35px') {
+    font-family: $font;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line-height;
+}
