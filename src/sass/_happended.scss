@@ -1,6 +1,7 @@
 .issues__boundary {
   position: relative;
   height: calc(1143px + 114px);
+  // display: none;
 }
 .issues {
   height: 1143px;
@@ -141,24 +142,28 @@
   margin-left: 226px;
 }
 @media screen and (max-width: 486px) {
-  .issues__boundary {
-    width: $width-responsive;
-    height: 1800px;
-
+  .issues__boundary { 
+    // height: 1800px;
+    height: fit-content;
+    
     .issues__object__1,
     .issues__object__2,
     .issues__object__3 {
       display: none;
     }
-    .issues__dice--5 {
-      right: 12px;
+    .issues__dice--5,.issues__dice--3 {
+      display: none;
     }
     .issues {
+      padding: 0 20px;
+      padding-top: 30px;
+      height: 1020px;
       &__brands {
         bottom: unset;
         grid-template-columns: repeat(2, 1fr);
         &__item{
           &__header{
+            font-size: 20px;
             background-color: $dark-maroon;
           }
           &__main{
@@ -170,6 +175,17 @@
         &__forward {
           display: none;
         }
+      }
+      &__title{
+        &__label{
+          
+        }
+        &__content{
+          margin-bottom: 30px;
+        }
+      }
+      &__more{
+        margin-bottom: 30px;
       }
     }
   }

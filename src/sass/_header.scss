@@ -1,47 +1,131 @@
-.header{
-    // width: 1920px - var( 97 * 2 );
-    width: 100%;
-    height: 80px;
-    background-color: $black-two;
+.header {
+  // width: calc(1920px - calc( 97px * 2 ));
+  width: 100%;
+  // max-width: 100%;
+  height: 80px;
+  background-color: $black-two;
+  display: flex;
+  align-items: center;
+  padding: 0 97px;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  &__logo {
+    width: 226px;
+    height: 26px;
+    background: url("../assets/images/logo.svg");
+    object-fit: contain;
+  }
+  &__navigation {
     display: flex;
+    gap: 0 76px;
+    color: rgb(248, 248, 248);
     align-items: center;
-    padding: 0 97px;
-    justify-content: space-between;
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    &__logo{
-        width: 226px;
-        height: 26px;
-        background: url('../assets/images/logo.svg');
-        object-fit: contain;
-    }
-    &__navigation{
-        display: flex;
-        gap: 0 76px;
-        color: rgb(248, 248, 248);
-        align-items: center;
-        height: 100%;
-        li{
-            text-transform: uppercase;
-            cursor: pointer;
-            @include textStyle($font,normal,14px,30px);
+    height: 100%;
+    li {
+      text-transform: uppercase;
+      cursor: pointer;
+      @include textStyle($font, normal, 14px, 30px);
 
-            &:hover{
-                color: $bright-orange;
-            }
-        }
-        div{
-            border: 1px solid $pinkish-grey-two;
-            height: 23px;
-        }
+      &:hover {
+        color: $bright-orange;
+      }
     }
+    div {
+      border: 1px solid $pinkish-grey-two;
+      height: 23px;
+    }
+  }
 }
-@media screen and(max-width: 486px){
-    .header{
-        height: 160px;
-        &__navigation{
-            display: none;
-        }
+.header {
+  .menu {
+  }
+}
+@media screen and(min-width: 486px) {
+  .header {
+    label,
+    .menu,
+    .menu__layer,
+    .menu__nav {
+      display: none;
     }
+  }
+}
+@media screen and(max-width: 767px) {
+  .header {
+    height: 80px;
+    padding: 20px;
+    &__navigation {
+      display: none;
+    }
+    &__logo {
+      width: 180px;
+      height: 50px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+    }
+    .menu {
+      display: block;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+      position: relative;
+      &__nav {
+        width: 80%;
+        height: 1000vh;
+        background-color: rgb(0, 0, 0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: 0.5s;
+
+        li {
+          list-style: none;
+          font-size: 20px;
+          color: white;
+          text-transform: uppercase;
+          padding: 10px 15px;
+        }
+        &__head {
+          display: flex;
+          justify-content: space-between;
+          color: white;
+          padding-bottom: 30px;
+          border-bottom: 2px solid white;
+          background-color: $bright-orange;
+          padding: 15px;
+          align-items: center;
+          .menu__nav__title {
+            font-size: 25px;
+            text-transform: uppercase;
+          }
+          .menu__nav__close {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+    .menu__layer {
+      width: 100%;
+      height: 1000vh;
+      background-color: rgba(0, 0, 0, 0.637);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      display: none;
+    }
+    #menu:checked ~ .menu__nav {
+      transform: translateX(0%);
+    }
+    #menu:checked ~ .menu__layer {
+      display: block;
+    }
+  }
 }

@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     gap: 83px;
+    // display: none;
     .footer__boundary{
         display: flex;
         gap: 184px;
@@ -102,14 +103,40 @@
         }
     }
 }
-@media screen and(max-width: 486px) {
+@media screen and(max-width: 767px) {
 
     .footer{
         padding: 30px;
-        width: $width-responsive;
+        gap: 30px;
+        height: unset;
+        &__boundary{
+            gap: 0px!important;
+            display: flex;
+            flex-direction: column;
+        }
 
         &__left{
-            width: 340px;
+            width: fit-content!important;
+            .footer__content{
+                max-width: 100%;
+                width: fit-content!important;
+            }
         }
+        &__right{
+            display: grid!important;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        &__info{
+            display: flex;
+            flex-direction: column;
+            gap: 30px ;
+            .footer__address{
+                // width: 725px!important;
+                width: fit-content!important;
+                text-align: center;
+            }
+        }
+    
     }
 }

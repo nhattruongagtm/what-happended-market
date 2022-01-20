@@ -1,6 +1,21 @@
 import React from "react";
-
+import { useEffect } from "react";
 export default function BrandStory() {
+  useEffect(()=>{
+    const brandItem1 = document.querySelector("#book__1");
+    const brandStory = document.querySelector("#brand__story");
+    const brandItem2 = document.querySelector("#book__2");
+    const brandItem3 = document.querySelector("#book__3");
+    const brandItem4 = document.querySelector("#book__4");
+    const brandItem5 = document.querySelector("#book__5");
+
+    document.addEventListener('scroll',()=>{
+      const pos = window.scrollY;
+      if(pos > 5150){
+          brandStory.classList.add('b__story__display');
+      }
+    })
+  },[])
   return (
     <div className="brand__story">
       <div className="story__title title">
@@ -34,25 +49,25 @@ export default function BrandStory() {
         </div>
         
       </div>
-        <div className="story__note story__absolute">
+        <div className="story__note story__absolute" id="brand__story">
           
         </div>
-        <div className="story__book__1 story__absolute">
+        <div className="story__book__1 story__absolute" id="book__1">
 
         </div>
-        <div className="story__book__2 story__absolute">
+        <div className="story__book__2 story__absolute" id="book__2">
 
         </div>
-        <div className="story__time story__absolute">
+        <div className="story__time story__absolute" id="book__3">
 
         </div>
-        <div className="story__plant story__absolute">
+        <div className="story__plant story__absolute" id="book__4">
 
         </div>
-        <div className="story__book__3 story__absolute">
+        <div className="story__book__3 story__absolute" id="book__5">
 
         </div>
-        <div className="story__book__4 story__absolute">
+        <div className="story__book__4 story__absolute" id="book__6">
 
         </div>
     </div>

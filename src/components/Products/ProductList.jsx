@@ -1,6 +1,6 @@
 import React from "react";
 import ProductItem from "./ProductItem";
-
+import {useEffect} from 'react'
 export default function ProductList() {
     const products = [
         {
@@ -179,9 +179,20 @@ export default function ProductList() {
             like: 236
         },
     ]
+    useEffect(() => {
+        const list = document.querySelector("#list");
+        document.addEventListener('scroll',()=>{
+            const pos = window.scrollY;
+
+            if(pos > 2000){
+                list.classList.add('product__list__display');
+                console.log("ok")
+            }
+        })
+    }, [])
   return (
     <>
-      <div className="product__list fluid">
+      <div className="product__list fluid" id="list">
         {products.map((product)=>(
             <ProductItem product={product} key={product.id}/>
         ))}

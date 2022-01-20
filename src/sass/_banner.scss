@@ -1,20 +1,21 @@
-.banner{
-    width: 1920px;
-    margin-top: 80px;
-    height: 1000px;
-    // // background-color: $bright-orange;
-    background: url('../assets/images/main-banner.png');
-    object-fit: contain;
+.banner {
+  // width: 100%;
+  width: 100%;
+  margin-top: 80px;
+  height: 1000px;
+  // // background-color: $bright-orange;
 
+  background: url("../assets/images/main-banner.png");
+  object-fit: contain;
+  background-position: 50% 50%;
 }
-@media screen and(max-width: 480px) {
-    .banner{
-        width: 973px;
-        margin-top: 160px;
-        // background-position: 50% 50%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 500px;
-
-    }
-}
+// @media screen and(max-width: 480px) {
+//   .banner {
+//     margin-top: 160px;
+//     // background-position: 50% 50%;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     height: 500px;
+//     // width: 100%;
+//   }
+// }
