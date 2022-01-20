@@ -7,6 +7,9 @@
   .what__object {
     position: absolute;
   }
+  &__more{
+    margin:  49px 0 74px 0;
+  }
   .what__object__1 {
     background: url("../assets/images/video.png");
     width: 1251px;
@@ -76,7 +79,7 @@
     z-index: 2;
   }
 }
-@media screen and (max-width: 486px) {
+@media screen and (max-width: 767px) {
   .what {
     height: 700px;
     &__object__2,
